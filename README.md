@@ -23,10 +23,7 @@ Complete an assessment from scratch that uses interactive coding & multiple-choi
 ✅Repository contains multiple descriptive commit messages, contains a README with a link to deployed project, and Screenshot.
 
 ## Live URL
+https://cynthiagodoy.github.io/Password-Generator/
 
 ## Screenshot
-
-The following animation demonstrates the application functionality:
-
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
-
+![](images/PasswordGenerator.PNG)
