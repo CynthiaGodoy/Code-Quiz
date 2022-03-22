@@ -31,12 +31,12 @@ var questions = [
 var score = 0;
 var questionsIndex = 0;
 
-var currentTime = document.querySelector("currentTime");
+var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
 
-let secondsLeft = 75; //SECONDS LEFT
+var secondsLeft = 75; //SECONDS LEFT
 var holdInterval = 0; //INTERVAL TIME
 var penalty = 10; //PENALTY TIME
 var ulCreate = document.createElement("ul"); //CREATES NEW ELEMENT
@@ -99,7 +99,7 @@ if (questionsIndex >= questions.length) { //QUESTION INDEX DETERMINES NUMBER USE
     allDone(); 
     createDiv.textContent = "End of Quiz!" + "" + "You got " + score + "/" + questions.length + "Correct!";
 } else {
-  render(questionIndex);
+  render(questionsIndex);
 }
   questionsDiv.appendChild(createDiv);
 }
@@ -116,10 +116,10 @@ function allDone() { //ALLDONE
   var createP = document.createElement("p"); //PARAGRAPH
   createP.setAttribute("id", "createP");
 
-  quesitonsDiv.appendChild(createP);
+  questionsDiv.appendChild(createP);
 
-  if (secondLeft >= 0) { //CALCULATES TIME REMAINING
-    var timeRemaining = secondLeft;
+  if (secondsLeft >= 0) { //CALCULATES TIME REMAINING
+    var timeRemaining = secondsLeft;
     var createP2 = document.createElement("p"); 
     clearInterval(holdInterval);
     createP.textContent = "Your final score is: " + timeRemaining;

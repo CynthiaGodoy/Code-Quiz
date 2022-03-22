@@ -122,6 +122,8 @@ textarea {
 
 #currentTime {
     float: right;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #createDiv {
