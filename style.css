@@ -14,7 +14,7 @@ body {
     background-color: white;
 }
 
-.start-box, #game-box, .score-box {
+#wrapper {
     justify-content: center;
     width: 800px;
     max-width: 80%;
@@ -25,13 +25,7 @@ body {
     margin-left: 20px;
 }
 
-/* START-BOX: Title, Directions---------------------------- */
-
-.text-info {
-    margin-left: 25px;
-}
-
-h1, h2 { /* SCORE-BOX & START-BOX*/
+h1 { 
     color: black;
     font-size: 36px;
     text-align: left;
@@ -45,11 +39,14 @@ p {
     margin-left: 25px;
 }
 
-/* end START-BOX: Title, Directions---------------------------- */
+/* #viewscore {
+    margin-left: 20%;
+    color: black;
+    text-align: left;
+    text-decoration:  none;
+}  */
 
-/* BUTTONS @ start and end of Quiz.---------------------------------------------*/
-
-#startTime, .btn-quit {
+#startTime, #goBack { /*START QUIZ BUTTON & GOBACK BUTTON*/
     border-radius: 5px;
     padding: 5px 10px;
     margin-top: 20px;
@@ -61,11 +58,11 @@ p {
     color: white;
 }
 
-#startTime:hover, .btn-quit:hover {
+#startTime:hover, #goBack:hover {
     background: purple;
 }
 
-#clear, #goBack, #highScore { /*SCORE-BOX*/
+#clear, #Submit { /*BUTTONS @ SCORE-BOX*/
     border-radius: 5px;
     padding: 5px 10px;
     justify-content: center;
@@ -77,53 +74,93 @@ p {
     color: black;
 }    
 
- #clear:hover, #goBack:hover #highScore:hover { /*SCORE-BOX*/
+#clear:hover, #Submit:hover { /*SCORE-BOX*/
     background: orange;
 }
 
-/* end BUTTONS @ start and end of Quiz.---------------------------------------------*/
-
-/* GAME-BOX : Timer Box, quiz questions.--------------------------------------*/
-
-#timecounter {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: right;
-    margin-right: 25px;
+label {
+    margin-right: 10px;
 }
 
-#questions {
-    color: black;
-    font-size: 24px;
-    text-align: left;
-    margin-left: 25px;
+input {
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px black;
 }
 
-#choices {
-    background: rgb(105, 150, 105);
+li { /*QUESTION CHOICES TEXT*/
+    background: rgb(183, 204, 183); 
     width: 90%;
     display: inline-block;
     border-radius: 8px;
-    padding: 3px;
+    padding: 5px;
     color: black;
-    font-size: 24px;
+    font-size: 18px;
     text-align: left;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 10px;
+    margin-top: 8px;
 }
 
-#choices:hover {
+li:hover {
     background: green;
-    color: white;
 }
 
-/* end GAME-BOX: Timer Box, quiz questions.--------------------------------------*/
+button {
+    border-radius: 8px;
+}
 
-/* SCORE-BOX:-----------*/
+textarea {
+    width: 90%;
+    margin: 20%;
+}
 
-.input-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#questionsDiv { /*QUESTIONS TEXT*/
+    margin-left: 25px;
+    margin-top: 25px;
+    font-size: 24px;
+}
+
+#currentTime {
+    float: right;
+}
+
+#createDiv {
+    margin-top: 20px;
+    border-top: 1px black;
+}
+
+/*MEDIA QUERIES --------------*/
+
+@media screen and (max-width: 768px) {
+    body { 
+        max-width: 768px;
+    }
+    #wrapper {
+        position: absolute;
+        left: 20%;
+    }
+    a {
+        margin-left: 20%;
+    }
+    #goBack {
+        position: relative;
+        left: 55%;
+    }
+    #clear {
+        position: relative;
+        right: 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body { 
+        max-width: 600px;
+    }
+    #wrapper {
+        position: absolute;
+        left: 10%;
+    }
+    a {
+        margin-left: 10%;
+    }
 }
