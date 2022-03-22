@@ -126,15 +126,44 @@ if (questionIndex >= questions.length) { //QUESTION INDEX DETERMINES NUMBER USER
   questionsDiv.appendChild(createDiv);
 }
 
-function allDone() {
+function allDone() { //ALLDONE
   questionsDiv.innerHTML = "";
   currentTime.innerHTML = "";
-  var createH1 = document.createElement("h1");
+  var createH1 = document.createElement("h1"); //HEADING
   createH1.setAttribute("id", "createH1");
   createH1.textContent = "Completed!"
 
   questionsDiv.appendChild(createH1);
 
-  var createP = document.createElement("p");
-  createP.setAttribute("id", )
+  var createP = document.createElement("p"); //PARAGRAPH
+  createP.setAttribute("id", "createP");
+
+  quesitonsDiv.appendChild(createP);
+
+  if (secondLeft >= 0) { //CALCULATES TIME REMAINING
+    var timeRemaining = secondLeft;
+    var createP2 = document.createElement("p"); 
+    clearInterval(holdInterval);
+    createP.textContent = "Your final score is: " + timeRemaining;
+
+    questionsDiv.appendChild(createP2);
+  }
+
+  var createLabel = document.createElement("input");
+  createLabel.setAttribute("id", "createLabel");
+  createLabel.textContent = "Enter your initials: ";
+
+  questionsDiv.appendChild(createLabel);
+
+  var createInput = document.createElement("button");
+  createInput.setAttribute("type", "text");
+  createInput.setAttribute("id", "Submit");
+  createInput.textContent = "Submit";
+
+  questionsDiv.appendChild(createInput);
+
+  var createSubmit = document.createElement("button");
+  createSubmit.setAttribute("type", "text");
+  createSubmit.setAttribute("id", "Submit");
+  createSubmit.textContent = "Submit";
 }
