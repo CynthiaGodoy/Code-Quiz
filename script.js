@@ -166,4 +166,31 @@ function allDone() { //ALLDONE
   createSubmit.setAttribute("type", "text");
   createSubmit.setAttribute("id", "Submit");
   createSubmit.textContent = "Submit";
+
+  questionsDiv.appendChild(createInput);
+
+  createSubmit.addEventListener("click", function() {
+    var initials = createInput.value;
+
+    if (initials ===null) {
+      console.log("No Value Entered!");
+    } else {
+      var finalScore = {
+        initials: initials,
+        score: timeRemaining
+      }
+        console.log(finalScore);
+        var allScores = localStorage.getItem("allScores");
+        if (allScores ===null) {
+        allScores = [];
+        }else {
+          allScores = JSON.parse(allScores);
+        }
+         allScores.push(finalScore);
+         var newScore = JSON.stringify(allScores);
+         localStorage.setItem("allScores", newScore);
+
+         window.location.replace("./score.html")
+      }
+    });
 }

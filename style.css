@@ -65,7 +65,7 @@ p {
     background: purple;
 }
 
-#clear, #goBack { /*SCORE-BOX*/
+#clear, #goBack, #highScore { /*SCORE-BOX*/
     border-radius: 5px;
     padding: 5px 10px;
     justify-content: center;
@@ -77,7 +77,7 @@ p {
     color: black;
 }    
 
- #clear:hover, #goBack:hover { /*SCORE-BOX*/
+ #clear:hover, #goBack:hover #highScore:hover { /*SCORE-BOX*/
     background: orange;
 }
 
