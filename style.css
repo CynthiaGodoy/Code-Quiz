@@ -39,13 +39,6 @@ p {
     margin-left: 25px;
 }
 
-/* #viewscore {
-    margin-left: 20%;
-    color: black;
-    text-align: left;
-    text-decoration:  none;
-}  */
-
 #startTime, #goBack { /*START QUIZ BUTTON & GOBACK BUTTON*/
     border-radius: 5px;
     padding: 5px 10px;
@@ -85,7 +78,9 @@ label {
 input {
     margin-bottom: 20px;
     width: 50%;
-    border: 1px black;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 li { /*QUESTION CHOICES TEXT*/

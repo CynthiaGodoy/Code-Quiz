@@ -16,9 +16,9 @@ allScores = JSON.parse(allScores);
         for (var i = 0; i < allScores.length; i++) {
             var createLi = document.createElement("li");
             createLi.textContent = allScores[i].initials + "" + allScores[i].score;
-            highScore.appendchild(createLi);
+            highScore.appendChild(createLi); //SPELLING ERROR FIXED BY BCS
         }}
-// Move to Index Page (EventListener)
+// MOVE TO INDEX PAGE (EventListener)
 goBack.addEventListener("click", function() {
     window.location.replace("./index.html");
 });

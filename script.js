@@ -31,7 +31,7 @@ var questions = [
 var score = 0;
 var questionsIndex = 0;
 
-var currentTime = document.querySelector("#currentTime");
+var currentTime = document.querySelector("#currentTime"); //HELP FROM BCS WAS MISSING #
 var timer = document.querySelector("#startTime");
 var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
@@ -97,7 +97,7 @@ function compare(event) {
 questionsIndex++;
 if (questionsIndex >= questions.length) { //QUESTION INDEX DETERMINES NUMBER USER IS ON
     allDone(); 
-    createDiv.textContent = "End of Quiz!" + "" + "You got " + score + "/" + questions.length + "Correct!";
+    createDiv.textContent = "End of Quiz! " + "" + "You got " + score + "/" + questions.length + " Correct!";
 } else {
   render(questionsIndex);
 }
@@ -109,7 +109,7 @@ function allDone() { //ALLDONE
   currentTime.innerHTML = "";
   var createH1 = document.createElement("h1"); //HEADING
   createH1.setAttribute("id", "createH1");
-  createH1.textContent = "Completed!"
+  createH1.textContent = "Congrats! You've Completed the Quiz!"
 
   questionsDiv.appendChild(createH1);
 
@@ -120,7 +120,7 @@ function allDone() { //ALLDONE
 
   if (secondsLeft >= 0) { //CALCULATES TIME REMAINING
     var timeRemaining = secondsLeft;
-    var createP2 = document.createElement("p"); 
+    var createP2 = document.createElement("P"); 
     clearInterval(holdInterval);
     createP.textContent = "Your final score is: " + timeRemaining;
 
@@ -141,7 +141,7 @@ function allDone() { //ALLDONE
   questionsDiv.appendChild(createInput);
 
   var createSubmit = document.createElement("button"); //SUBMIT
-  createSubmit.setAttribute("type", "submit");
+  createSubmit.setAttribute("type", "Submit");
   createSubmit.setAttribute("id", "Submit");
   createSubmit.textContent = "Submit";
 
@@ -164,9 +164,9 @@ function allDone() { //ALLDONE
         } else {
           allScores = JSON.parse(allScores);
         }
-         allScores.push(finalScore);
-         var newScore = JSON.stringify(allScores);
-         localStorage.setItem("allScores", newScore);
+        allScores.push(finalScore);
+        var newScore = JSON.stringify(allScores);
+        localStorage.setItem("allScores", newScore);
 
          window.location.replace("./score.html") //SENDS TO HTML
       }
