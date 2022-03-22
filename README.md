@@ -26,4 +26,4 @@ Complete an assessment from scratch that uses interactive coding & multiple-choi
 https://cynthiagodoy.github.io/Code-Quiz/
 
 ## Screenshot
-![](images/CodeQuiz.PNG)
+![](images/Code-Quiz.PNG)
