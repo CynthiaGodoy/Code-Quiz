@@ -12,18 +12,18 @@ Complete an assessment from scratch that uses interactive coding & multiple-choi
 
 ✅Create a interactive coding quiz with a start button & timer.
 
-✅Timer starts and presented with a question. When question is answered another question is presented.
+✅Timer starts when presented with a question. When question is answered another question is presented.
 
 ✅When question is answered incorrectly, time is subtracted from the clock.
 
 ✅When all questions are answered or the timer reaches 0. The game is over.
 
-✅Once game is over player may save initials with the score.
+✅Once game is over player enters initials to the save the high score before resetting and starting over.
 
 ✅Repository contains multiple descriptive commit messages, contains a README with a link to deployed project, and Screenshot.
 
 ## Live URL
-https://cynthiagodoy.github.io/Password-Generator/
+https://cynthiagodoy.github.io/Code-Quiz/
 
 ## Screenshot
-![](images/PasswordGenerator.PNG)
+![](images/CodeQuiz.PNG)
