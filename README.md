@@ -27,3 +27,6 @@ https://cynthiagodoy.github.io/Code-Quiz/
 
 ## Screenshot
 ![](images/Code-Quiz.PNG)
+
+- - -
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
